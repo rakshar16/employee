@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employees | Admin Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside>
+
+        <h2>Admin Portal</h2>
+
+        <nav>
+
+            <a href="index.html">Dashboard</a>
+
+            <a href="employees.html">Employees</a>
+
+            <a href="attendance.html">Attendance</a>
+
+            <a href="tasks.html">Tasks</a>
+
+            <a href="leaves.html">Leaves</a>
+
+            <a href="performance.html">Performance</a>
+
+            <a href="settings.html">Settings</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>Employees</h1>
+
+                <p>Manage employee information</p>
+
+            </div>
+
+            <div class="admin-name">
+
+                Admin
+
+            </div>
+
+        </header>
+
+
+        <!-- SEARCH EMPLOYEE -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchEmployee"
+                placeholder="Search employee by name or ID"
+                onkeyup="searchEmployee()"
+            >
+
+        </div>
+
+
+        <!-- ADD EMPLOYEE -->
+
+        <section class="add-employee">
+
+            <h2>Add Employee</h2>
+
+            <div class="employee-form">
+
+                <div>
+
+                    <label>Employee ID</label>
+
+                    <input
+                        type="text"
+                        id="employeeID"
+                        placeholder="EMP006"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>Name</label>
+
+                    <input
+                        type="text"
+                        id="employeeName"
+                        placeholder="Enter name"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>Domain</label>
+
+                    <select id="employeeDomain">
+
+                        <option value="">Select Domain</option>
+
+                        <option value="Software Development">
+                            Software Development
+                        </option>
+
+                        <option value="Web Development">
+                            Web Development
+                        </option>
+
+                        <option value="Data Science">
+                            Data Science
+                        </option>
+
+                        <option value="Digital Marketing">
+                            Digital Marketing
+                        </option>
+
+                        <option value="UI/UX Design">
+                            UI/UX Design
+                        </option>
+
+                        <option value="Human Resources">
+                            Human Resources
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div>
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="employeeEmail"
+                        placeholder="example@gmail.com"
+                    >
+
+                </div>
+
+
+                <button onclick="addEmployee()">
+
+                    Add Employee
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- EMPLOYEE TABLE -->
+
+        <h2 class="section-title">Employee List</h2>
+
+        <table id="employeeTable">
+
+            <!-- TABLE HEADING -->
+
+            <tr>
+
+                <th>Employee ID</th>
+
+                <th>Name</th>
+
+                <th>Domain</th>
+
+                <th>Email</th>
+
+                <th>Status</th>
+
+                <th>Action</th>
+
+            </tr>
+
+
+            <!-- EMPLOYEE 1 -->
+
+            <tr>
+
+                <td>EMP001</td>
+
+                <td>Rahul</td>
+
+                <td>Software Development</td>
+
+                <td>rahul@gmail.com</td>
+
+                <td>Active</td>
+
+                <td>
+                    <button onclick="deleteEmployee(this)">
+                        Delete
+                    </button>
+                </td>
+
+            </tr>
+
+
+            <!-- EMPLOYEE 2 -->
+
+            <tr>
+
+                <td>EMP002</td>
+
+                <td>Ananya</td>
+
+                <td>Digital Marketing</td>
+
+                <td>ananya@gmail.com</td>
+
+                <td>Active</td>
+
+                <td>
+                    <button onclick="deleteEmployee(this)">
+                        Delete
+                    </button>
+                </td>
+
+            </tr>
+
+
+            <!-- EMPLOYEE 3 -->
+
+            <tr>
+
+                <td>EMP003</td>
+
+                <td>Arjun</td>
+
+                <td>UI/UX Design</td>
+
+                <td>arjun@gmail.com</td>
+
+                <td>Active</td>
+
+                <td>
+                    <button onclick="deleteEmployee(this)">
+                        Delete
+                    </button>
+                </td>
+
+            </tr>
+
+
+            <!-- EMPLOYEE 4 -->
+
+            <tr>
+
+                <td>EMP004</td>
+
+                <td>Priya</td>
+
+                <td>Human Resources</td>
+
+                <td>priya@gmail.com</td>
+
+                <td>Active</td>
+
+                <td>
+                    <button onclick="deleteEmployee(this)">
+                        Delete
+                    </button>
+                </td>
+
+            </tr>
+
+
+            <!-- EMPLOYEE 5 -->
+
+            <tr>
+
+                <td>EMP005</td>
+
+                <td>Karan</td>
+
+                <td>Data Science</td>
+
+                <td>karan@gmail.com</td>
+
+                <td>Active</td>
+
+                <td>
+                    <button onclick="deleteEmployee(this)">
+                        Delete
+                    </button>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 Admin Portal</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

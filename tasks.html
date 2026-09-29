@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasks</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside>
+
+        <h2>Admin Portal</h2>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="employees.html">Employees</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="tasks.html">Tasks</a>
+            <a href="leaves.html">Leaves</a>
+            <a href="performance.html">Performance</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+                <h1>Tasks</h1>
+                <p>Manage and assign employee tasks</p>
+            </div>
+
+            <div class="admin-name">
+                Admin
+            </div>
+
+        </header>
+
+
+        <!-- SUMMARY -->
+
+        <section class="summary">
+
+            <div class="summary-box">
+                <h3>Tasks Assigned</h3>
+                <p id="totalTasks">30</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Tasks Completed</h3>
+                <p>18</p>
+            </div>
+
+            <div class="summary-box">
+                <h3>Tasks Pending</h3>
+                <p id="pendingTasks">12</p>
+            </div>
+
+        </section>
+
+
+        <!-- ASSIGN TASK -->
+
+        <section class="assign-task">
+
+            <h2>Assign New Task</h2>
+
+            <div class="task-form">
+
+                <div>
+                    <label>Employee</label>
+
+                    <select id="employee">
+                        <option value="">Select Employee</option>
+                        <option value="Rahul">Rahul</option>
+                        <option value="Ananya">Ananya</option>
+                        <option value="Arjun">Arjun</option>
+                        <option value="Priya">Priya</option>
+                    </select>
+
+                </div>
+
+
+                <div>
+                    <label>Task</label>
+
+                    <input
+                        type="text"
+                        id="task"
+                        placeholder="Enter task"
+                    >
+
+                </div>
+
+
+                <div>
+                    <label>Deadline</label>
+
+                    <input
+                        type="date"
+                        id="deadline"
+                    >
+
+                </div>
+
+
+                <button onclick="assignTask()">
+                    Assign Task
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TASK TABLE -->
+
+        <h2 class="section-title">Task List</h2>
+
+        <table id="taskTable">
+
+            <tr>
+                <th>Task ID</th>
+                <th>Employee</th>
+                <th>Task</th>
+                <th>Deadline</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>T001</td>
+                <td>Rahul</td>
+                <td>Website Development</td>
+                <td>05-10-2026</td>
+                <td>Completed</td>
+            </tr>
+
+            <tr>
+                <td>T002</td>
+                <td>Ananya</td>
+                <td>Marketing Report</td>
+                <td>08-10-2026</td>
+                <td>Pending</td>
+            </tr>
+
+            <tr>
+                <td>T003</td>
+                <td>Arjun</td>
+                <td>UI Design</td>
+                <td>10-10-2026</td>
+                <td>In Progress</td>
+            </tr>
+
+            <tr>
+                <td>T004</td>
+                <td>Priya</td>
+                <td>Employee Documentation</td>
+                <td>12-10-2026</td>
+                <td>Completed</td>
+            </tr>
+
+        </table>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 Admin Portal</p>
+
+    </footer>
+    <script src="script.js"></script>
+      
+
+</body>
+
+</html>
